@@ -246,10 +246,10 @@ var good = true;
         });
     }
     if(good) {
-		if (MatchingGame=="yes"){
+//		if (MatchingGame=="yes"){
         $("#Message").text("Trainer Attached. Select Your Cheats ...");
         PS4.Notify(222, "Trainer Attached Successfully \nSelect Any Cheats You Require");
-		}
+//		}
     }
 $("#trainer-dialog").modal("show");
 HideLDR();
