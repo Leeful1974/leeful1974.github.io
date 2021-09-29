@@ -118,7 +118,7 @@ function FillDialog(cheat, index){
 var name = cheat.name;
 var content;
 var index = index;
-if (MatchingGame=="yes"||MatchingGame=="no"){
+if (MatchingGame=="yes"){
 	var CheatOffset = cheat.memory[0].offset;
 	var JsonCheatONvalue = HexStringToBase64(cheat.memory[0].on);
 	var CheatBase = bigInt(FindBase());
@@ -236,7 +236,7 @@ var good = true;
     if (SelectedProcess == null || typeof ProcessMaps.state == 'function' || typeof ProcessInfo.state == 'function') {
 		if (sessionStorage.runningCUSA!=null){Message.innerHTML="<font color=#dc3545>CHEATS DISABLED!</font><br>This Is The Wrong Trainer For The Game That Is Running"}
         else {Message.innerHTML="<font color=#dc3545>TRAINER NOT ATTACHED!</font><br>Is The WebRTE Payload Loaded? Is A Game Running?";}
-        good = true;
+        good = false;
     }
     if (mods.length !== undefined)
     {
@@ -246,7 +246,7 @@ var good = true;
         });
     }
     if(good) {
-		if (MatchingGame=="yes"||MatchingGame=="no"){
+		if (MatchingGame=="yes"){
         $("#Message").text("Trainer Attached. Select Your Cheats ...");
         PS4.Notify(222, "Trainer Attached Successfully \nSelect Any Cheats You Require");
 		}
@@ -392,7 +392,7 @@ disableNAV();
 	var cusa = $(this).find(".cusa").text();	
 if (sessionStorage.TrainerAvailable=="yes"){ip="127.0.0.1";}
 if (cusa!=sessionStorage.runningCUSA){ip=null;}
-    PS4 = new PS4RTE("127.0.0.1");   
+    PS4 = new PS4RTE(ip);   
     $("#cover").attr('data-src', "./games/" + cusa + ".jpg");
     observer.load($("#cover").get(0), true);
     ProcessList		= $.Deferred();
