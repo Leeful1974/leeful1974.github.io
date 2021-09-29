@@ -459,7 +459,7 @@ if(trainerYN==0){
 if(trainerYN!=0){sessionStorage.TrainerAvailable="yes";}
 }
 
-function GetRunningCUSA(){alert("test");
+function GetRunningCUSA(){
 PS4 = new PS4RTE("127.0.0.1");
 ProcessList		= $.Deferred();
 ProcessInfo		= $.Deferred();
