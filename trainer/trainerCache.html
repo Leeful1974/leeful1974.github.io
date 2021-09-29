@@ -1,0 +1,21 @@
+<html manifest="trainerCache.manifest"><!--  -->
+<head>
+<title>Prb Exploit Menu Essentials + Leeful Offline PS4 Trainer</title>
+<script>
+UA=navigator.userAgent.substring(navigator.userAgent.indexOf("0.00 (")+28,navigator.userAgent.indexOf(") Apple"));
+history.replaceState(null,null,'../index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Trainer Cache Please Wait ... " + Percent + "%"};
+function DisplayCacheProgress(){
+setTimeout(function(){window.msgs.innerHTML="Trainer Cache Installed Successfully ...";localStorage.isPrbCached=true;},1000);
+setTimeout(function(){
+if(UA=="5.05"||UA=="6.72"){window.msgs.innerHTML="Now Turn Off The Internet & Reopen The Browser";}
+if(UA=="7.02"||UA=="7.55"){window.msgs.innerHTML="Now Turn Off The Internet & Reopen The Browser To Run The Webkit Exploit<br>If The Webkit Does Not Load After 5 Attempts Exit Browser And Try Again ...";}
+},3000);
+}
+window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+</head>
+<body style="background-color:#003791;color:white;font-size:20px;text-align:center;">
+<hr><h1 id=msgs style='font-size:28px;margin:-4px 0 0 0;text-align:center;color:white;-webkit-font-feature-settings:"tnum";font-feature-settings:"tnum";'></h1><hr>
+</body>
+</html>
