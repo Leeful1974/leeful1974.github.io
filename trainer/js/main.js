@@ -470,7 +470,7 @@ PS4.GetProcessList(GetProcessListCallback, FailCallback);
 		ProcessList = pl;
 		$(ProcessList).each(function(ix,process){	
 	var defer = PS4.GetProcessInfo(process.pid, GetProcessInfoCallback, FailCallback),filtered = defer.then(function (pi){
-	var tid = pi.titleid.trim();
+	var tid = pi.titleid.trim();alert(tid);
 		if(tid.startsWith("CUSA")){
 		sessionStorage.runningCUSA=tid;
 		gameSTAT.innerHTML="Running Game ID: "+tid;
