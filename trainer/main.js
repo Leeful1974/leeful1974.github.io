@@ -1,7 +1,7 @@
 var ip=null;
 var listUrl = "./list.json";
 var PS4RTE = function(ip){
-this.base = "http://" + ip + ":771/";
+this.base = "https://" + ip + ":771/";
 	this.GetProcessList = function(callback, failure){
 		return $.get(this.base + "list", callback).fail(failure);
 	};
