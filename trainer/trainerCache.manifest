@@ -871,7 +871,6 @@ CACHE MANIFEST
 ..\trainer\js\bootstrap.js
 ..\trainer\js\jquery.min.js
 ..\trainer\js\lazyload.min.js
-..\trainer\js\main.js
 
 NETWORK:
 *
