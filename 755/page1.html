@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page1</title>
+<style>
+body{background-color:transparent;color:white;font-size:20px;text-align:center;margin:0;}
+select{color:white;margin:0px;outline:none;border:1px solid #839ACA;background:linear-gradient(180deg,rgba(74,91,134,1)0%,rgba(14,34,87,1)35%);}
+select:hover{cursor:pointer;background:linear-gradient(180deg,rgba(74,91,134,1)0%,rgba(4,9,23,1)35%);}
+button{width:388px;margin:5px 3px 5px 3px;padding:0px;border:2px solid #839ACA;text-align:left;color:white;outline:none;background:linear-gradient(180deg,rgba(74,91,134,1)0%,rgba(14,34,87,1)35%);}
+button:hover{cursor:pointer;background:linear-gradient(180deg,rgba(74,91,134,1)0%,rgba(4,9,23,1)35%);}
+.butIMG{display:inline-block;margin:-0px;border-right:3px solid #839ACA;outline:none;}
+.butIMG img{width:70px;height:70px;padding:5px 5px 2px 5px;}
+.butTXT{float:right;text-align:center;width:299px;font-size:28px;margin:22px 0 0 0;}
+</style>
+</head>
+<body>
+<br><br><br>
+<button onclick="load_exploit()" onmouseover="top.msgs.innerHTML='Kernel Exploit - By Sleirsgoevy'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/exploit.png"></div><div class=butTXT>Run Kernel Exploit</div></button>
+<button onclick="load_goldhen()" onmouseover="top.msgs.innerHTML='GoldHEN v1.0 - By SiSTRo / Joonie86'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/hen.png"></div><div class=butTXT>GoldHen v1.0</div></button>
+<button onclick="load_goldhenb()" onmouseover="top.msgs.innerHTML='GoldHEN v1.1 - By SiSTRo / Joonie86 (Recommended)'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/hen.png"></div><div class=butTXT>GoldHen v1.1</div></button><br>
+<button onclick="load_binloader()" onmouseover="top.msgs.innerHTML='BinLoader - By OpenOrbis'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/binloader.png"></div><div class=butTXT>BinLoader</div></button>
+<button onclick="load_orbisTB()" onmouseover="top.msgs.innerHTML='Orbis Toolbox - 1167 Alpha / By OSM-Made'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/OrbisToolbox.png"></div><div class=butTXT>Orbis ToolBox</div></button>
+<button onclick="load_app2usb()" onmouseover="top.msgs.innerHTML='App2USB - By Stooged [7.55 Port By Al Azif]'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/app2usb.png"></div><div class=butTXT>App2USB</div></button><br>
+<button onclick="load_dumpergu()"onmouseover="top.msgs.innerHTML='Game Dumper v1.8 - By xVortex [7.55 Port and Mod By Leeful]'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/dumper.png"></div><div class=butTXT>Game Dumper</div></button>
+<button onclick="load_DBbackup()" onmouseover="top.msgs.innerHTML='Database Backup v1.0 - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/dbbackup.png"></div><div class=butTXT>Database Backup</div></button>
+<button onclick="load_DBrestore()" onmouseover="top.msgs.innerHTML='Database Restore v1.0 - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/dbrestore.png"></div><div class=butTXT>Database Restore</div></button><br>
+<button onclick="load_enabledex()" onmouseover="top.msgs.innerHTML='Enable DEX v1.0 - By notzecoxao'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/DEXenable.png"></div><div class=butTXT>Enable DEX</div></button>
+<button onclick="load_disabledex()" onmouseover="top.msgs.innerHTML='Disable DEX v1.0 - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/DEXdisable.png"></div><div class=butTXT>Disable DEX</div></button>
+<button onclick="load_ps4debug()" onmouseover="top.msgs.innerHTML='PS4Debug v1.0.13 - By ctn'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/ps4debug.png"></div><div class=butTXT>PS4Debug</div></button><br>
+<button onclick="load_enableupdates()" onmouseover="top.msgs.innerHTML='Enable Updates v1.0 - By Al Azif'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/enableupdates.png"></div><div class=butTXT>Enable Updates</div></button>
+<button onclick="load_webrte()" onmouseover="top.msgs.innerHTML='WebRTE (PS4 Trainer Payload) v1.0 - By PS4 Trainer'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/WebRTE.png"></div><div class=butTXT>WebRTE</div></button>
+<button onclick="showTrainer()" onmouseover="top.msgs.innerHTML='Offline PS4 Trainer Menu - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/755/img/ps4trainer.png"></div><div class=butTXT>PS4 Trainer Menu</div></button>
+<script>
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;top.document.body.appendChild(gs);}
+function load_exploit(){top.msgs.innerHTML="Running Kernel Exploit Please Wait ...";getScript("/755/exp_leefulV6JB.js",function(){setTimeout(top.jailbreak,500);});}
+function load_goldhen(){top.msgs.innerHTML="Loading GoldHEN v1.0 ...";top.LoadedMSG="GoldHEN v1.0 Loaded";top.PLfile="/755/payloads/pl_goldhen_10.bin";setTimeout(top.get_payload,100);}
+function load_goldhenb(){top.msgs.innerHTML="Loading GoldHEN v1.1 ...";top.LoadedMSG="GoldHEN v1.1 Loaded";top.PLfile="/755/payloads/pl_goldhen_11.bin";setTimeout(top.get_payload,100);}
+function load_binloader(){top.msgs.innerHTML="Send Payload To Port 9021 ...";top.LoadedMSG="Payload Loaded";top.PLfile="dummy.js";top.ThisIsBinLoader="yes";setTimeout(top.get_payload,100);}
+function load_orbisTB(){top.msgs.innerHTML="Loading Orbis ToolBox ...";top.LoadedMSG="Orbis ToolBox Loaded";top.PLfile="/755/payloads/pl_OrbisToolbox.bin";setTimeout(top.get_payload,100);}
+function load_app2usb(){top.msgs.innerHTML="Loading App2USB ...";top.LoadedMSG="App2USB Loaded / Use The PS Button When Exiting The Menu";top.PLfile="/755/payloads/pl_app2usb.bin";setTimeout(top.get_payload,100);}
+function load_dumpergu(){top.msgs.innerHTML="Loading Game Dumper ...";top.LoadedMSG="Game Dumper Loaded / Use The PS Button When Exiting The Menu";top.PLfile="/755/payloads/pl_dumperGU.bin";setTimeout(top.get_payload,100);}
+function load_DBbackup(){top.msgs.innerHTML="Loading Database Backup ...";top.LoadedMSG="Database Backup Loaded";top.PLfile="/755/payloads/pl_DBbackup.bin";setTimeout(top.get_payload,100);}
+function load_DBrestore(){top.msgs.innerHTML="Loading Database Restore ...";top.LoadedMSG="Database Restore Loaded";top.PLfile="/755/payloads/pl_DBrestore.bin";setTimeout(top.get_payload,100);}
+function load_enabledex(){top.msgs.innerHTML="Loading Enable-Dex ...";top.LoadedMSG="Enable-Dex Loaded";top.PLfile="/755/payloads/pl_DEXenable.bin";setTimeout(top.get_payload,100);}
+function load_disabledex(){top.msgs.innerHTML="Loading Disable-Dex ...";top.LoadedMSG="Disable-Dex Loaded";top.PLfile="/755/payloads/pl_DEXdisable.bin";setTimeout(top.get_payload,100);}
+function load_ps4debug(){top.msgs.innerHTML="Loading PS4Debug ...";top.LoadedMSG="PS4Debug Loaded";top.PLfile="/755/payloads/pl_ps4debug.bin";setTimeout(top.get_payload,100);}
+function load_enableupdates(){top.msgs.innerHTML="Loading Enable Updates ...";top.LoadedMSG="Enable Updates Loaded";top.PLfile="/755/payloads/pl_enableupdates.bin";setTimeout(top.get_payload,100);}
+function load_webrte(){top.msgs.innerHTML="Loading WebRTE ...";top.LoadedMSG="WebRTE Loaded";top.PLfile="/755/payloads/pl_webrte.bin";setTimeout(top.get_payload,100);}
+function showTrainer(){top.showTrainer();}
+</script>	
+</body>
+</html> 
