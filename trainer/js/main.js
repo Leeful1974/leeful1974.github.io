@@ -1,7 +1,7 @@
 var ip=null;
 var listUrl = "./list.json";
 var PS4RTE = function(ip){
-this.base = "http://" + ip + ":771/";
+this.base = "https://" + ip + ":771/";
 	this.GetProcessList = function(callback, failure){
 		return $.get(this.base + "list", callback).fail(failure);
 	};
@@ -125,7 +125,7 @@ if (MatchingGame=="yes"){
 	var CheatPID = SelectedProcess.pid;
 	var CheatAddress = (CheatBase.add(parseInt(cheat.memory[0].offset,16)));
 	var CheatLength = cheat.memory[0].on.length / 2;
-	var leefulURL = "http://127.0.0.1:771/read?pid="+CheatPID+"&address="+CheatAddress+"&length="+CheatLength;
+	var leefulURL = "https://127.0.0.1:771/read?pid="+CheatPID+"&address="+CheatAddress+"&length="+CheatLength;
 	var req = new XMLHttpRequest();
 	switch(cheat.type)
 	{
