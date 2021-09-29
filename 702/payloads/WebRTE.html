@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Loading 7.02 WebRTE ...</title>
+<script>history.replaceState(null,null,'../../index.html');</script>
+<script>
+var scriptCode = '';
+function preloadScripts(lst){for(var i = 0; i < lst.length; i++){var xhr = new XMLHttpRequest();xhr.open('GET', lst[i], false);xhr.send('');scriptCode += xhr.responseText + '\n';}}
+preloadScripts(['../702/payloads/WebRTE.js']);
+</script>
+</head>
+<body style="background-color:#003791;color:white;text-align:center;overflow:hidden;" onload="setTimeout(function(){eval.call(window,scriptCode)},100);">
+<hr><h1 id=msgs style='font-size:28px;margin:-4px 0 0 0;'>Loading WebRTE, Please Wait ...</h1><hr>
+<div id=dlog></div>
+<button style=opacity:0 id="input1" onfocus="handle2()"></button>
+<button style=opacity:0 id="input2"></button>
+<button style=opacity:0 id="input3" onfocus="handle2()"></button>
+<select style=opacity:0 id="select1"><option value="value1">Value1</option></select>
+</body>
+</html>

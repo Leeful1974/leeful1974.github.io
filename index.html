@@ -1,5 +1,25 @@
 <html>
+<head>
+<title>Prb Exploit Menu Essentials + Leeful Offline PS4 Trainer</title>
+</head>
+<script>
+UA=navigator.userAgent.substring(navigator.userAgent.indexOf("0.00 (")+28,navigator.userAgent.indexOf(") Apple"));
+if(UA!="5.05" && UA!="6.72" && UA!="7.02" && UA!="7.55"){alert("Your PS4 Firmware Version Is Not Supported!\n\nYour PS4 Firmware Might Be Currntly Spoofed.\n If This Is The Case, Reboot Your PS4 And Try Again.");}
+var histlength=history.length;history.go(-histlength);
+
+if (window.applicationCache.status=='0'){
+  if(UA=="5.05"){window.location.replace("505/cache505.html");}
+  if(UA=="6.72"){window.location.replace("672/cache672.html");}
+  if(UA=="7.02"){window.location.replace("702/cache702.html");}
+  if(UA=="7.55"){window.location.replace("755/cache755.html");}
+}
+else {
+  if(UA=="5.05"){window.location.replace("505/index.html");}
+  if(UA=="6.72"){window.location.replace("672/index.html");}
+  if(UA=="7.02"){if(sessionStorage.WebRTE=="loading"){window.location.replace("702/payloads/WebRTE.html");}else{window.location.replace("702/index.html");}}
+  if(UA=="7.55"){window.location.replace("755/index.html");}
+}
+</script>
 <body>
-HELLO
 </body>
 </html>
