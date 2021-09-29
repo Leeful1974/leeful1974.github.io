@@ -1,7 +1,7 @@
 var ip=null;
 var listUrl = "./list.json";
 var PS4RTE = function(ip){
-this.base = "http://" + ip + ":771/";
+this.base = "https://" + ip + ":771/";
 	this.GetProcessList = function(callback, failure){
 		return $.get(this.base + "list", callback).fail(failure);
 	};
@@ -459,7 +459,7 @@ if(trainerYN==0){
 if(trainerYN!=0){sessionStorage.TrainerAvailable="yes";}
 }
 
-function GetRunningCUSA(){
+function GetRunningCUSA(){alert("test");
 PS4 = new PS4RTE("127.0.0.1");
 ProcessList		= $.Deferred();
 ProcessInfo		= $.Deferred();
@@ -470,7 +470,7 @@ PS4.GetProcessList(GetProcessListCallback, FailCallback);
 		ProcessList = pl;
 		$(ProcessList).each(function(ix,process){	
 	var defer = PS4.GetProcessInfo(process.pid, GetProcessInfoCallback, FailCallback),filtered = defer.then(function (pi){
-	var tid = pi.titleid.trim();alert(tid);
+	var tid = pi.titleid.trim();
 		if(tid.startsWith("CUSA")){
 		sessionStorage.runningCUSA=tid;
 		gameSTAT.innerHTML="Running Game ID: "+tid;
