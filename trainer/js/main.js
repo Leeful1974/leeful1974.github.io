@@ -392,7 +392,7 @@ disableNAV();
 	var cusa = $(this).find(".cusa").text();	
 if (sessionStorage.TrainerAvailable=="yes"){ip="127.0.0.1";}
 if (cusa!=sessionStorage.runningCUSA){ip=null;}
-    PS4 = new PS4RTE(ip);   
+    PS4 = new PS4RTE("127.0.0.1")   
     $("#cover").attr('data-src', "./games/" + cusa + ".jpg");
     observer.load($("#cover").get(0), true);
     ProcessList		= $.Deferred();
