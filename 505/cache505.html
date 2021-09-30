@@ -6,7 +6,7 @@ history.replaceState(null,null,'../index.html');var histlength=history.length;hi
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing 5.05 Menu Cache Please Wait ... " + Percent + "%"};
 function DisplayCacheProgress(){
 setTimeout(function(){window.msgs.innerHTML="Menu Cache Installed Successfully ...";},1000);
-setTimeout(function(){window.location.replace("http://leeful.000webhostapp.com/trainerCache.html");},3000);
+setTimeout(function(){window.location.replace("../trainer/trainerCache.html");},3000);
 }
 window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
