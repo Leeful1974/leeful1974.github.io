@@ -1,7 +1,7 @@
 var ip=null;
 var listUrl = "./list.json";
-var PS4RTE = function(){
-this.base = "https://localhost:771/";
+var PS4RTE = function(ip){
+this.base = "https://" + ip + ":771/";
 	this.GetProcessList = function(callback, failure){
 		return $.get(this.base + "list", callback).fail(failure);
 	};
@@ -392,7 +392,7 @@ disableNAV();
 	var cusa = $(this).find(".cusa").text();	
 if (sessionStorage.TrainerAvailable=="yes"){ip="127.0.0.1";}
 if (cusa!=sessionStorage.runningCUSA){ip=null;}
-    PS4 = new PS4RTE();   
+    PS4 = new PS4RTE(ip);   
     $("#cover").attr('data-src', "./games/" + cusa + ".jpg");
     observer.load($("#cover").get(0), true);
     ProcessList		= $.Deferred();
@@ -460,7 +460,7 @@ if(trainerYN!=0){sessionStorage.TrainerAvailable="yes";}
 }
 
 function GetRunningCUSA(){
-PS4 = new PS4RTE();
+PS4 = new PS4RTE("127.0.0.1");
 ProcessList		= $.Deferred();
 ProcessInfo		= $.Deferred();
 ProcessMaps		= $.Deferred();
