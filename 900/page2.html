@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page2</title>
+<style>
+body{background-color:transparent;color:white;font-size:20px;text-align:center;margin:0;}
+button{width:388px;margin:5px 3px 5px 3px;padding:0px;border:2px solid #839ACA;text-align:left;color:white;outline:none;background:linear-gradient(180deg,rgba(74,91,134,1)0%,rgba(14,34,87,1)35%);}
+button:hover{cursor:pointer;background:linear-gradient(180deg,rgba(74,91,134,1)0%,rgba(4,9,23,1)35%);}
+.butIMG{display:inline-block;margin:-0px;border-right:3px solid #839ACA;outline:none;}
+.butIMG img{width:70px;height:70px;padding:5px 5px 2px 5px;}
+.butTXT{float:right;text-align:center;width:299px;font-size:28px;margin:22px 0 0 0;}
+</style>
+</head>
+<body>
+<div id=tip1>After GoldHEN has loaded, enable the BinLoader Server in GoldHEN settings to enable instant payload loading.</div>
+<br><br>
+<button onclick="load_goldhen2()" onmouseover="top.msgs.innerHTML='GoldHEN v2.0b2 (Latest) - By SiSTRo'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/hen.png"></div><div class=butTXT>GoldHEN 2.0b2</div></button>
+<button onclick="load_goldhenb()" onmouseover="top.msgs.innerHTML='GoldHEN v2.0b - By SiSTRo'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/hen.png"></div><div class=butTXT>GoldHEN 2.0b</div></button>
+<button onclick="load_app2usb()" onmouseover="top.msgs.innerHTML='App2USB - By Stooged [9.00 Port By Al Azif]'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/app2usb.png"></div><div class=butTXT>App2USB</div></button><br>
+<button onclick="load_DBbkup()" onmouseover="top.msgs.innerHTML='Database Backup v1.0 - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/dbbackup.png"></div><div class=butTXT>Database Backup</div></button>
+<button onclick="load_DBrest()" onmouseover="top.msgs.innerHTML='Database Restore v1.0 - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/dbrestore.png"></div><div class=butTXT>Database Restore</div></button>
+<button onclick="load_orbisTBX()" onmouseover="top.msgs.innerHTML='Orbis Toolbox - 1190 Alpha Build - By OSM-Made'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/OrbisToolbox.png"></div><div class=butTXT>Orbis ToolBox</div></button><br>
+<button onclick="load_enaDex()" onmouseover="top.msgs.innerHTML='Enable DEX v1.0 - By notzecoxao'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/DEXenable.png"></div><div class=butTXT>Enable DEX</div></button>
+<button onclick="load_disDex()" onmouseover="top.msgs.innerHTML='Disable DEX v1.0 - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/DEXdisable.png"></div><div class=butTXT>Disable DEX</div></button>
+<button onclick="load_ps4debug()" onmouseover="top.msgs.innerHTML='PS4Debug v1.0.14 - By ctn'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/ps4debug.png"></div><div class=butTXT>PS4Debug</div></button><br>
+<button onclick="load_dumperGU()" onmouseover="top.msgs.innerHTML='Game Dumper - By xVortex [9.00 MOD By Leeful]'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/dumper.png"></div><div class=butTXT>Game Dumper</div></button>
+<button onclick="load_enableUp()" onmouseover="top.msgs.innerHTML='Enable Updates v1.0 - By Al Azif'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/enableupdates.png"></div><div class=butTXT>Enable Updates</div></button>
+<button onclick="load_binLdr9020()" onmouseover="top.msgs.innerHTML='BinLoader [Port 9020] - By Specter'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/binloader.png"></div><div class=butTXT>BinLoader 9020</div></button><br>
+<button onclick="load_webrtePL()" onmouseover="top.msgs.innerHTML='WebRTE (PS4 Trainer Payload) v1.0 - By PS4 Trainer [9.00 Port By Karo]'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/WebRTE.png"></div><div class=butTXT>WebRTE</div></button>
+<button onclick="showTrainer()" onmouseover="top.msgs.innerHTML='Offline PS4 Trainer Menu - By Leeful'" onmouseout="top.defaultTXT()">
+<div class=butIMG><img src="/900/img/ps4trainer.png"></div><div class=butTXT>PS4 Trainer Menu</div></button>
+<br><br><br>
+<div id=tip2 style=display:none>*Tip: As well as the payloads above, you can now directly send any payload you wish to port 9090 using Netcat GUI or any payload sender.</div>
+<script>
+if (sessionStorage.blSERVER=="yes"){tip1.innerHTML="Binloader Server is active. Instant payload loading is now available.";tip2.style.display="block"}
+
+function PIK(){
+if (sessionStorage.blSERVER=="yes"){
+GPL();
+}
+else {
+sessionStorage.lastPL=arguments.callee.caller.name;
+sessionStorage.loadWKPayload="yes";
+top.PLfile=PAYLOAD;
+top.PLNAME=PLNAME;
+top.PLDONE=PLDONE;
+document.body.style.cursor="none";
+top.document.body.style.cursor="none";
+top.myembed1.style.display="none";
+top.loadWebkitPL();
+}
+}
+
+function GPL(){var req=new XMLHttpRequest();req.open("GET","http://127.0.0.1:9090/status");req.send();req.onerror=function(){alert("Cannot Load Payload Because The BinLoader Server Is Not Running");return;};req.onload=function(){var responseJson=JSON.parse(req.responseText);if(responseJson.status=="ready"){getPayload(PAYLOAD,function(req){if((req.status===200||req.status===304)&&req.response){sendPayload("http://127.0.0.1:9090",req.response);}});} else{alert("Cannot Load Payload Because The BinLoader Server Is Busy");return;}};var getPayload=function(pl,onLoadEndCallback){var req=new XMLHttpRequest();req.open('GET',pl);req.send();req.responseType="arraybuffer";req.onload=function(event){if(onLoadEndCallback)onLoadEndCallback(req,event);};};var sendPayload=function(url,data,onLoadEndCallback){var req=new XMLHttpRequest();req.open("POST",url,true);req.send(data);req.onload=function(event){PLD();if(onLoadEndCallback)onLoadEndCallback(req,event);};};}
+function PLD(){setTimeout(function(){top.msgs.innerHTML=PLDONE;},4000);}
+function PLmsgs(){top.msgs.innerHTML="Loading "+PLNAME+" ...";PLDONE=PLNAME+" Loaded";}
+function load_goldhen2(){PLNAME="GoldHEN";       PLmsgs();PAYLOAD="/900/payloads/pl_GoldHEN2b2.bin";PIK();}
+function load_goldhenb(){PLNAME="GoldHEN";       PLmsgs();PAYLOAD="/900/payloads/pl_GoldHEN2b.bin";PIK();}
+function load_app2usb(){PLNAME="App2USB";        PLmsgs();PAYLOAD="/900/payloads/pl_app2usb.bin";PIK();}
+function load_DBbkup(){PLNAME="Database Backup"; PLmsgs();PAYLOAD="/900/payloads/pl_DatabaseBackup.bin";PIK();}
+function load_DBrest(){PLNAME="Database Restore";PLmsgs();PAYLOAD="/900/payloads/pl_DatabaseRestore.bin";PIK();}
+function load_enaDex(){PLNAME="Enable DEX";      PLmsgs();PAYLOAD="/900/payloads/pl_DEXenable.bin";PIK();}
+function load_disDex(){PLNAME="Disable DEX";     PLmsgs();PAYLOAD="/900/payloads/pl_DEXdisable.bin";PIK();}
+function load_ps4debug(){PLNAME="PS4Debug";      PLmsgs();PAYLOAD="/900/payloads/pl_ps4debug.bin";PIK();}
+function load_enableUp(){PLNAME="Enable Updates";PLmsgs();PAYLOAD="/900/payloads/pl_EnableUpdates.bin";PIK();}
+function load_dumperGU(){PLNAME="Game Dumper";   PLmsgs();PAYLOAD="/900/payloads/pl_DumperGU.bin";PIK();}
+function load_orbisTBX(){PLNAME="Orbis Toolbox"; PLmsgs();PAYLOAD="/900/payloads/pl_OrbisTB.bin";PIK();}
+function load_webrtePL(){PLNAME="WebRTE";        PLmsgs();PAYLOAD="/900/payloads/pl_webrte.bin";PIK();}
+function load_binLdr9020(){sessionStorage.lastPL=arguments.callee.name;sessionStorage.binloader="yes";top.PLfile="/900/payloads/pl_DEXdisable.bin";top.loadWebkitPL();}
+function showTrainer(){top.showTrainer();}
+if (sessionStorage.lastPL!=null) eval(sessionStorage.lastPL+"()");
+</script>	
+</body>
+</html> 

@@ -1,0 +1,47 @@
+CACHE MANIFEST 
+# Prb 
+# 22/12/2021- 5:51:07.88 
+
+..\index.html
+..\900\cache900.html
+..\900\exp_int64.js
+..\900\exp_kexploit.js
+..\900\exp_rop.js
+..\900\exp_webkit.js
+..\900\index.html
+..\900\page1.html
+..\900\page2.html
+..\900\img\app2usb.png
+..\900\img\binloader.png
+..\900\img\dbbackup.png
+..\900\img\dbrestore.png
+..\900\img\DEXdisable.png
+..\900\img\DEXenable.png
+..\900\img\dumper.png
+..\900\img\enableupdates.png
+..\900\img\exploit.png
+..\900\img\hen.png
+..\900\img\OrbisToolbox.png
+..\900\img\ps4debug.png
+..\900\img\ps4trainer.png
+..\900\img\WebRTE.png
+..\900\payloads\pl_app2usb.bin
+..\900\payloads\pl_DatabaseBackup.bin
+..\900\payloads\pl_DatabaseRestore.bin
+..\900\payloads\pl_DEXdisable.bin
+..\900\payloads\pl_DEXenable.bin
+..\900\payloads\pl_DumperGU.bin
+..\900\payloads\pl_EnableUpdates.bin
+..\900\payloads\pl_GoldHEN2b.bin
+..\900\payloads\pl_GoldHEN2b2.bin
+..\900\payloads\pl_OrbisTB.bin
+..\900\payloads\pl_ps4debug.bin
+..\900\payloads\pl_webrte.bin
+
+NETWORK:
+*
+
+SETTINGS:
+prefer-online:
+
+# Date: 22/12/2021  5:51:08.01
